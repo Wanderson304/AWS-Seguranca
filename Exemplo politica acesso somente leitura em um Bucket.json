@@ -1,0 +1,21 @@
+#Para usar o exemplo abaixo você precisa criar uma Politica e depois associar a politica em uma Role
+#Apos isso pode associar a role para um usuario ou identidiade 
+
+#Substitua o seu-nome-do-bucket pelo nome do seu Bucket
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:ListBucket"
+      ],
+      "Resource": [
+        "arn:aws:s3:::seu-nome-do-bucket/*",
+        "arn:aws:s3:::seu-nome-do-bucket"
+      ]
+    }
+  ]
+}
